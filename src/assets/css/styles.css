@@ -25,28 +25,29 @@ body{
     #tarjeta1{
         text-align: center;
         margin-top: 50px;
-        width:25vw;
-        height:15vw;
+        width:35vw;
+        height:20vw;
         border-radius: 8%;
         z-index: 1;
         position:absolute
     }
     #tarjeta2{
         text-align: center;
-        width:25vw;
-        height:15vw;
+        width:35vw;
+        height:20vw;
         border-radius: 8%;
         z-index: -1;
-        position:absolute
+        position:absolute;
+        
     }
     .container{
         
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-right: 30px;
-        margin-bottom: 50px;
-        
+        padding-right: 30px;
+        padding-bottom:100px;
+        padding-right: 150px;
     }
     .cabecera{
         background-color: transparent
@@ -54,11 +55,28 @@ body{
     .pie{
         background-color: white;
     }
+    .container2{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .formularioFlex{
+        
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        
+    }
 }
-
+@media screen and (max-width: 2000px) {
 /*estils tarjetas de crédito*/
 #tarjeta1{
-    
     width:25vw;
     height:15vw;
     border-radius: 8%;
@@ -78,4 +96,18 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+.formularioFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 }
