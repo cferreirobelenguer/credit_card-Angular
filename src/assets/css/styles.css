@@ -1,0 +1,81 @@
+
+/*fondo*/
+body{
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:50%;
+}
+/*Header*/
+.cabecera{
+    background-color: white
+}
+/*Footer*/
+.pie{
+    background-color: white
+}
+
+@media screen and (max-width: 1050px) {
+    body{
+        background-image: url("../images/fondoResponsive.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    #tarjeta1{
+        text-align: center;
+        margin-top: 50px;
+        width:25vw;
+        height:15vw;
+        border-radius: 8%;
+        z-index: 1;
+        position:absolute
+    }
+    #tarjeta2{
+        text-align: center;
+        width:25vw;
+        height:15vw;
+        border-radius: 8%;
+        z-index: -1;
+        position:absolute
+    }
+    .container{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 30px;
+        margin-bottom: 50px;
+        
+    }
+    .cabecera{
+        background-color: transparent
+    }
+    .pie{
+        background-color: white;
+    }
+}
+
+/*estils tarjetas de crédito*/
+#tarjeta1{
+    
+    width:25vw;
+    height:15vw;
+    border-radius: 8%;
+    position:50%
+}
+#tarjeta2{
+    margin-top: 20px;
+    margin-left: 60px;
+    width:25vw;
+    height:15vw;
+    border-radius: 8%;
+    position:100%
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
