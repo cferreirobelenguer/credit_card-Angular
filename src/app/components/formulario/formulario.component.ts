@@ -5,9 +5,20 @@ import {Component} from '@angular/core';
     templateUrl:'../formulario/formulario.component.html'
 })
 export class Formulario{
-    
+    public user:any
     constructor(){
         
-        console.log("Mi componente cargado")
+        this.user={
+            name:'',
+            number:'',
+            fecha1:'',
+            fecha2:'',
+            cvc:''
+
+        }
+    }
+    onSubmit(){
+        console.log(this.user)
+        alert("Formulario enviado")
     }
 }
