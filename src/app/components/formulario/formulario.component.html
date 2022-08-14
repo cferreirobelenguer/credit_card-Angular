@@ -14,15 +14,15 @@
         <div class="container2">
         <form #tarjetForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="relative mb-4">
-          <label for="name" class="leading-7 text-sm text-gray-600" >CARDHOLDER NAME</label>
-          <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="user.name" class=" bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out w-96" placeholder="e.g Jane Aplessed" required pattern="[a-zA-Z]+" >
+          <label for="name" class="leading-7 text-sm text-gray-600" >CARDHOLDER NAME&nbsp;</label>
+          <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="user.name" class=" bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out w-80" placeholder="e.g Jane Aplessed" required pattern="[a-zA-Z ]+" >
           <small style="color:red" *ngIf="!name.valid && name.touched">
             Invalid format, letters only
           </small>
         </div>
         <div class="relative mb-4">
-          <label for="email" class="leading-7 text-sm text-gray-600 ">CARD NUMBER</label>
-          <input type="text" id="number" name="number" #number="ngModel" [(ngModel)]="user.number"  class="bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out w-96 " placeholder="e.g 1234 5678 9123 0000" required pattern="[0-9]*">
+          <label for="email" class="leading-7 text-sm text-gray-600 ">CARD NUMBER&nbsp;</label>
+          <input type="text" id="number" name="number" #number="ngModel" [(ngModel)]="user.number"  class="bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out w-80 " placeholder="e.g 1234 5678 9123 0000" required pattern="[0-9]*">
           <small style="color:red" *ngIf="!number.valid && number.touched">
             Invalid format, numbers only
           </small>
@@ -30,29 +30,29 @@
         </div>
         <div class="flex flex-row justify-between items-center"  >
           <div class="relative mb-4">
-            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">EXP.DATE (MM/YY)</label>
-            <input type="text" id="fechaDias" name="fechaDias" #fecha1="ngModel" [(ngModel)]="user.fecha1" [max]="2" class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="MM" required>
+            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">EXP.DATE&nbsp;</label>
+            <input type="text" id="fechaDias" name="fechaDias" #fecha1="ngModel" [(ngModel)]="user.fecha1"  class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="MM" required pattern="[0-9]*">
             <br>
             <small style="color:red" *ngIf="!fecha1.valid && fecha1.touched">
-              Can't be blanck
+              Can't be blanck and only numbers
             </small>
             <small style="color:red" *ngIf="fecha1.errors?.['max']">Only 2 characters</small>
           </div>
           <div class="relative mb-4" >
-            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">EXP.DATE (MM/YY)</label>
-            <input type="text" id="fechaMeses" name="fechaMeses" #fecha2="ngModel" [(ngModel)]="user.fecha2"  class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="YY" required>
+            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">(MM/YY)&nbsp;</label>
+            <input type="text" id="fechaMeses" name="fechaMeses" #fecha2="ngModel" [(ngModel)]="user.fecha2"  class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="YY" required pattern="[0-9]*">
             <br>
             <small style="color:red" *ngIf="!fecha2.valid && fecha2.touched">
-              Can't be blanck
+              Can't be blanck and only numbers
             </small>
             
           </div>
           <div class="relative mb-4">
-            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">CVC</label>
-            <input type="text" id="cvc" name="cvc" #cvc="ngModel" [(ngModel)]="user.cvc"  class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="e.g 123" required>
+            <label for="message" class="leading-7 text-sm text-gray-600 w-0.5">CVC&nbsp;</label>
+            <input type="text" id="cvc" name="cvc" #cvc="ngModel" [(ngModel)]="user.cvc"  class="w-20 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="e.g 123" required pattern="[0-9]*">
             <br>
             <small style="color:red" *ngIf="!cvc.valid && cvc.touched">
-              Can't be blanck
+              Can't be blanck and only numbers
             </small>
             
           </div>
