@@ -9,6 +9,7 @@ export class Formulario{
     public user:any;
     public datos:any;
     public validacion:boolean;
+    public volver:boolean;
     
     
     constructor(){
@@ -28,9 +29,13 @@ export class Formulario{
             cvc:''
         }
         this.validacion=false
-        
+        this.volver=false
 
     }
+    volverMenu(){
+        this.volver=true
+        console.log("Este es el evento de volver")
+    };
     onSubmit(){
         
         let noValidado=false
