@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {Formulario} from './components/formulario/formulario.component';
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 
 
@@ -22,7 +22,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    SweetAlert2Module
+    
     
   ],
   providers: [],
