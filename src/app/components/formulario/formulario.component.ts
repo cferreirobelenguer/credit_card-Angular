@@ -70,7 +70,35 @@ export class Formulario{
         }
         //We validate is dates length are 2 digits
         if(this.user.fecha1.length==2 && this.user.fecha2.length==2){
-            this.datos.fecha=this.user.fecha1+"/"+this.user.fecha2
+            let mes;
+            let year;
+            let inicio=this.user.fecha1.substring(0, 1);
+            let inicioYear=this.user.fecha2.substring(0,1);
+
+            if(inicio==="0"){
+                mes=parseInt((this.user.fecha1.substring(1,2)))
+                
+                console.log(mes)
+            }else{
+                mes=parseInt(this.user.fecha1)
+                console.log(mes)
+            }
+            if(inicioYear==="0"){
+                year=parseInt((this.user.fecha2.substring(1,2)))
+                
+                console.log(year)
+            }else{
+                year=parseInt(this.user.fecha2)
+                console.log(year)
+            }
+
+            if(((mes>=1)&&(mes<=12))&&((year>=22))){
+                console.log("validado")
+                    this.datos.fecha=this.user.fecha1+"/"+this.user.fecha2
+            }else{
+                noValidado=true
+            }
+            
         }else{
             noValidado=true
         }
