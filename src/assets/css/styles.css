@@ -1,10 +1,18 @@
 
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("../fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 /*fondo*/
 body{
     background-image: url("../images/bg-main-desktop.png");
     background-repeat: no-repeat;
     background-position:left;
     background-size:50%;
+    font-family: "SpaceGrotesk";
 }
 /*Header*/
 .cabecera{
@@ -52,6 +60,20 @@ body{
         padding-right: 30px;
         padding-bottom:100px!important;
         padding-right: 150px;
+    }
+    .container4{
+        background-color: white;
+        margin-left:60px!important;
+        margin-right:80px!important;
+        padding-left: 80px!important;
+        padding-right: 50px;
+        margin: auto;
+        padding-top: 120px!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px!important;
     }
     .cabecera{
         background-color: transparent
@@ -105,6 +127,47 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+}
+.container4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+
+
+}
+.parrafo1{
+    font-size: 2vw;
+}
+
+.circle{
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    background-image: linear-gradient(to bottom right,  hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+.parrafo2{
+    margin:30px
+}
+.icono{
+    margin-bottom: 10px;
+}
+.boton{
+    border-radius: 4px;
+    background-color: black;
+    color:white;
+    margin:10px;
+    text-align: center;
+    width: 300px;
+    height: 40px;
 }
 .container2{
     display: flex;

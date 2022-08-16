@@ -33,8 +33,14 @@ export class Formulario{
 
     }
     volverMenu(){
-        this.volver=true
+        this.validacion=false
         console.log("Este es el evento de volver")
+        //reset inputs
+        this.user.name=""
+        this.user.number=""
+        this.user.fecha1=""
+        this.user.fecha2=""
+        this.user.cvc=""
     };
     onSubmit(){
         
